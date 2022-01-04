@@ -1,0 +1,13 @@
+app:
+  await-termination-seconds: 60
+  task-execution-seconds: 10
+  crons:
+    - name: cron1
+      threads: 8
+      expression: 0/10 * * * * *
+    - name: cron2
+      threads: 4
+      expression: 0/60 * * * * *
+    - name: cron3
+      threads: 2
+      expression: 0/60 0 * * * *
